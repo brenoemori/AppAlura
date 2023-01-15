@@ -3,7 +3,6 @@ import { Image, StyleSheet, Dimensions } from "react-native";
 
 import Texto from "../../../componentes/Texto";
 import topo from "../../../../assets/topo.png";
-import cesta from "../../../mocks/cesta"
 
 const width = Dimensions.get('screen').width;
 
@@ -24,9 +23,9 @@ const estilos = StyleSheet.create ({
         position: "absolute",
         textAlign: "center",
         fontSize: 16,
-        lineHeight: 26,
+        lineHeight: 16,
         color: "white",
         fontWeight: "bold",
-        padding: 60
+        padding: 30
     }
 })
