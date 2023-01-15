@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Dimensions } from "react-native";
+import { Image, StyleSheet, Dimensions, SafeAreaView } from "react-native";
 
 import Texto from "../../../componentes/Texto";
 import topo from "../../../../assets/topo.png";
@@ -8,8 +8,10 @@ const width = Dimensions.get('screen').width;
 
 export default function Topo ({ titulo }) {
     return <>
-    <Image source={topo} style={estilos.topo}/>
-    <Texto style={estilos.titulo}>{ titulo }</Texto> 
+    <SafeAreaView>
+        <Image source={topo} style={estilos.topo}/>
+        <Texto style={estilos.titulo}>{ titulo }</Texto> 
+    </SafeAreaView>
     </>
 }
 
@@ -26,6 +28,6 @@ const estilos = StyleSheet.create ({
         lineHeight: 16,
         color: "white",
         fontWeight: "bold",
-        padding: 30
+        padding: 35
     }
 })

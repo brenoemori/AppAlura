@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect} from 'react';
-import { StatusBar , SafeAreaView, View } from 'react-native';
+import { StatusBar, StyleSheet, SafeAreaView } from 'react-native';
+
 import { 
   useFonts, 
   Montserrat_400Regular,
@@ -42,10 +43,16 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <StatusBar />
+    <SafeAreaView style={ [style.container] } onLayout={onLayoutRootView}>
+        <StatusBar barStyle={'dark-content'} />
       <Cesta {...mock} />
     </SafeAreaView>
   );
 }
+
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+})
 
